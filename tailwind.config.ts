@@ -28,6 +28,12 @@ export default {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
+				coral: {
+					DEFAULT: '#F4A261',
+					light: '#E76F51',
+					dark: '#2A9D8F'
+				},
+				cream: '#F1FAEE',
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
