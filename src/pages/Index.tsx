@@ -8,81 +8,109 @@ export default function Index() {
   const services = [
     {
       title: "Индивидуальная терапия",
-      description: "Персональная работа с эмоциональными трудностями",
-      duration: "50 минут",
+      description: "Работа с личными проблемами в отношениях",
+      duration: "60 минут",
+      price: "4 000 ₽"
+    },
+    {
+      title: "Парная терапия", 
+      description: "Восстановление доверия и близости в паре",
+      duration: "1 час 30 минут",
+      price: "6 000 ₽"
+    },
+    {
+      title: "Онлайн консультации",
+      description: "Удобный формат для решения проблем на расстоянии",
+      duration: "60 минут", 
       price: "3 500 ₽"
-    },
-    {
-      title: "Семейная терапия", 
-      description: "Работа с парами и семьями для улучшения отношений",
-      duration: "1 час 20 минут",
-      price: "5 000 ₽"
-    },
-    {
-      title: "Групповая терапия",
-      description: "Работа в группе для развития социальных навыков",
-      duration: "1 час 30 минут", 
-      price: "2 000 ₽"
     }
   ];
 
   const products = [
     {
-      title: "Курс \"Управление тревожностью\"",
-      description: "21-дневный курс практических техник для снижения тревоги",
-      price: "4 900 ₽",
-      format: "Онлайн-курс"
+      title: "Курс \"Здоровые отношения\"",
+      description: "Полный гид по построению гармоничных отношений",
+      price: "12 900 ₽",
+      format: "Видео-курс + материалы",
+      url: "/product/healthy-relationships",
+      features: ["20+ видео уроков", "Рабочие тетради", "Чек-листы"]
     },
     {
-      title: "Рабочая тетрадь \"Эмоциональный баланс\"",
-      description: "120 страниц упражнений для самопознания и развития",
-      price: "1 200 ₽",
-      format: "PDF + печатная версия"
+      title: "\"Преодоление ревности\"",
+      description: "Практические техники борьбы с деструктивной ревностью",
+      price: "7 500 ₽",
+      format: "Онлайн-курс",
+      url: "/product/overcoming-jealousy",
+      features: ["12 видео модулей", "Аудио медитации", "Личный дневник"]
     },
     {
-      title: "Медитации для сна",
-      description: "Коллекция из 15 авторских медитаций для качественного отдыха",
-      price: "990 ₽",
-      format: "Аудио-курс"
+      title: "\"Возвращение страсти в брак\"",
+      description: "Как вернуть романтику и интимность в долгие отношения",
+      price: "9 900 ₽",
+      format: "Видео + аудио",
+      url: "/product/passion-in-marriage",
+      features: ["15 практик", "30 упражнений", "Личная поддержка"]
+    }
+  ];
+
+  const articles = [
+    {
+      title: "5 признаков токсичных отношений",
+      excerpt: "Как распознать нездоровые паттерны поведения в отношениях",
+      readTime: "7 мин",
+      views: "15,2k"
+    },
+    {
+      title: "Почему мужчины уходят от идеальных женщин",
+      excerpt: "Разбираем психологию мужского поведения в отношениях", 
+      readTime: "10 мин",
+      views: "28,1k"
+    },
+    {
+      title: "Как восстановить доверие после измены",
+      excerpt: "Пошаговый план работы с парой после кризиса",
+      readTime: "12 мин", 
+      views: "41,3k"
     }
   ];
 
   const testimonials = [
     {
-      name: "Анна К.",
-      text: "После работы с Марией я научилась лучше понимать свои эмоции и справляться со стрессом. Очень благодарна за поддержку!",
+      name: "Алексей и Мария",
+      text: "Дмитрий помог нам пережить кризис в отношениях. Его методы действительно работают, мы снова счастливы вместе.",
       rating: 5
     },
     {
-      name: "Дмитрий С.",
-      text: "Семейная терапия помогла нам с женой наладить общение. Мария создала очень комфортную атмосферу.",
+      name: "Елена К.",
+      text: "Курс по ревности кардинально изменил мою жизнь. Я наконец-то научилась доверять партнеру.",
       rating: 5
     },
     {
-      name: "Елена М.",
-      text: "Курс по тревожности оказался очень практичным. Техники действительно работают в повседневной жизни.",
+      name: "Андрей С.",
+      text: "Профессиональный подход, глубокое понимание мужской психологии. Рекомендую всем парам в кризисе.",
       rating: 5
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-cream to-white">
+    <div className="min-h-screen bg-gradient-to-b from-sky to-white">
       {/* Navigation */}
-      <nav className="bg-white/90 backdrop-blur-sm border-b border-coral/10 sticky top-0 z-50">
+      <nav className="bg-white/90 backdrop-blur-sm border-b border-blue/10 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Icon name="Heart" className="text-coral text-2xl" />
-              <h1 className="text-xl font-bold text-coral-dark">Мария Иванова</h1>
+              <Icon name="Brain" className="text-blue text-2xl" />
+              <h1 className="text-xl font-bold text-blue-dark">Дмитрий Волков</h1>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#about" className="text-coral-dark hover:text-coral transition-colors">Обо мне</a>
-              <a href="#services" className="text-coral-dark hover:text-coral transition-colors">Услуги</a>
-              <a href="#products" className="text-coral-dark hover:text-coral transition-colors">Продукты</a>
-              <a href="#reviews" className="text-coral-dark hover:text-coral transition-colors">Отзывы</a>
-              <a href="#contact" className="text-coral-dark hover:text-coral transition-colors">Контакты</a>
+              <a href="#about" className="text-blue-dark hover:text-blue transition-colors">Обо мне</a>
+              <a href="#services" className="text-blue-dark hover:text-blue transition-colors">Услуги</a>
+              <a href="#products" className="text-blue-dark hover:text-blue transition-colors">Курсы</a>
+              <a href="#articles" className="text-blue-dark hover:text-blue transition-colors">Статьи</a>
+              <a href="#reviews" className="text-blue-dark hover:text-blue transition-colors">Отзывы</a>
+              <a href="#contact" className="text-blue-dark hover:text-blue transition-colors">Контакты</a>
             </div>
-            <Button className="bg-coral hover:bg-coral/90">
+            <Button className="bg-blue hover:bg-blue/90">
               Записаться
             </Button>
           </div>
@@ -95,55 +123,55 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge className="bg-coral/10 text-coral border-coral/20 px-4 py-1">
-                  Сертифицированный психолог
+                <Badge className="bg-blue/10 text-blue border-blue/20 px-4 py-1">
+                  Специалист по психологии отношений
                 </Badge>
-                <h1 className="text-5xl lg:text-6xl font-bold text-coral-dark leading-tight">
-                  Путь к <span className="text-coral">внутренней гармонии</span> начинается здесь
+                <h1 className="text-5xl lg:text-6xl font-bold text-blue-dark leading-tight">
+                  Верните <span className="text-blue">гармонию</span> в отношения
                 </h1>
-                <p className="text-xl text-coral-dark/80 leading-relaxed">
-                  Помогаю людям обрести душевное равновесие, справиться с тревогой и 
-                  построить здоровые отношения с собой и окружающими
+                <p className="text-xl text-blue-dark/80 leading-relaxed">
+                  Помогаю парам и одиноким людям строить здоровые отношения, 
+                  преодолевать кризисы и находить настоящую любовь
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-coral hover:bg-coral/90 text-white px-8 py-4">
+                <Button size="lg" className="bg-blue hover:bg-blue/90 text-white px-8 py-4">
                   <Icon name="Calendar" className="mr-2" />
                   Записаться на консультацию
                 </Button>
-                <Button size="lg" variant="outline" className="border-coral text-coral hover:bg-coral/5 px-8 py-4">
-                  <Icon name="Phone" className="mr-2" />
-                  Бесплатная консультация
+                <Button size="lg" variant="outline" className="border-blue text-blue hover:bg-blue/5 px-8 py-4">
+                  <Icon name="Play" className="mr-2" />
+                  Посмотреть видео
                 </Button>
               </div>
               <div className="flex items-center gap-8 pt-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-coral">500+</div>
-                  <div className="text-sm text-coral-dark/70">Довольных клиентов</div>
+                  <div className="text-2xl font-bold text-blue">1000+</div>
+                  <div className="text-sm text-blue-dark/70">Спасенных отношений</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-coral">8 лет</div>
-                  <div className="text-sm text-coral-dark/70">Опыта работы</div>
+                  <div className="text-2xl font-bold text-blue">12 лет</div>
+                  <div className="text-sm text-blue-dark/70">Опыта работы</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-coral">15+</div>
-                  <div className="text-sm text-coral-dark/70">Сертификатов</div>
+                  <div className="text-2xl font-bold text-blue">50+</div>
+                  <div className="text-sm text-blue-dark/70">Статей и видео</div>
                 </div>
               </div>
             </div>
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/img/e7c0772f-dcac-4cbb-bd4b-6b191770346e.jpg" 
-                  alt="Мария Иванова - психолог"
+                  src="/img/fe9d4588-29eb-4bb5-87db-cc0c1340e725.jpg" 
+                  alt="Дмитрий Волков - психолог"
                   className="w-full aspect-[4/5] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-coral/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue/20 to-transparent"></div>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl border border-coral/10">
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl border border-blue/10">
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <div className="text-sm text-coral-dark">Онлайн сейчас</div>
+                  <div className="text-sm text-blue-dark">Принимаю сегодня</div>
                 </div>
               </div>
             </div>
